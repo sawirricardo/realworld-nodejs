@@ -22,6 +22,9 @@ import { ProfilesModule } from './api/profiles/profiles.module';
       // entities: [],
       autoLoadEntities: true,
       synchronize: false,
+      extra: {
+        ssl: process.env.NODE_ENV ? true : false,
+      },
     }),
     UsersModule,
     ArticlesModule,
