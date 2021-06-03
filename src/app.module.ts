@@ -23,7 +23,7 @@ import { ProfilesModule } from './api/profiles/profiles.module';
       autoLoadEntities: true,
       synchronize: false,
       extra: {
-        ssl: true,
+        ssl: process.env.NODE_ENV == 'production' ? true : false,
       },
     }),
     UsersModule,
